@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apero After Night - Menu</title>
+    <style>
+        /* Styles de base */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* En-tête */
+        header {
+            background-color: #1a2a6c;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Section du menu */
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Styles pour le Slideshow */
+        #slideshow {
+            position: relative;
+            max-width: 100%;
+            height: 400px; /* Ajustez la hauteur selon vos besoins */
+            margin-bottom: 40px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Change de 'cover' à 'contain' pour éviter le recadrage */
+            transition: opacity 2s ease-in-out; /* Ajusté pour correspondre à l'animation */
+        }
+
+        /* Animation pour les slides */
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        .active {
+            display: block;
+            animation: fade 2s; /* Augmenté de 1s à 2s */
+        }
+
+        /* Styles pour les articles de menu */
+        .menu-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .menu-item {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .menu-item h2 {
+            margin: 15px 0 10px;
+            font-size: 1.5em;
+            color: #1a2a6c;
+        }
+
+        .menu-item p {
+            padding: 0 15px 15px;
+            font-size: 1em;
+            color: #555;
+        }
+
+        /* Bouton Commander */
+        .order-button {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 15px;
+            background-color: #28a745;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 50px;
+            transition: background-color 0.3s;
+        }
+
+        .order-button:hover {
+            background-color: #218838;
+        }
+
+        /* Pied de page */
+        footer {
+            background-color: #1a2a6c;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        /* Media Queries pour la responsivité */
+        @media (min-width: 600px) {
+            .menu-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 900px) {
+            .menu-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- En-tête -->
+    <header>
+        <h1>Apero After Night</h1>
+        <p>Livraison d'alcool tous les jours</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="menu.html">Menu</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Section du menu -->
+    <main>
+        <!-- Slideshow -->
+        <div id="slideshow">
+            <img src="GibsonS.png" class="slide active" alt="Promotion 1">
+            <img src="Poliakov.png" class="slide" alt="Promotion 2">
+            <img src="heineken.png" class="slide" alt="Promotion 3">
+            <img src="Coca Cola Original.png" class="slide" alt="Promotion 3">
+            <img src="Schweppes.png" class="slide" alt="Promotion 3">
+            <!-- Ajoutez autant d'images que nécessaire -->
+        </div>
+
+        <!-- Articles de menu -->
+        <div class="menu-container">
+            <!-- Exemple d'article de menu -->
+            <div class="menu-item">
+                <img src="Jack Daniel's.png" alt="Jack Daniel's">
+                <h2>Jack Daniel's</h2>
+                <p>Un whiskey de renommée mondiale avec un goût unique et inimitable.</p>
+            </div>
+
+            <div class="menu-item">
+                <img src="Captain Morgan.png" alt="Captain Morgan">
+                <h2>Captain Morgan</h2>
+                <p>Rhum épicé parfait pour vos cocktails et vos soirées festives.</p>
+            </div>
+
+            <div class="menu-item">
+                <img src="Crazy Tiger.png" alt="Crazy Tiger">
+                <h2>Crazy Tiger</h2>
+                <p>Une liqueur exotique qui ajoutera une touche sauvage à vos boissons.</p>
+            </div>
+
+            <!-- Ajoutez autant de produits que nécessaire en suivant la même structure -->
+        </div>
+
+        <!-- Bouton Commander -->
+        <a href="https://ilan0609.github.io/Apero-After-Night/" class="order-button" target="_blank">Commander</a>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        &copy; 2024 Apero After Night. Tous droits réservés.
+    </footer>
+
+    <!-- Script pour le Slideshow -->
+    <script>
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("slide");
+
+        function showSlides() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex - 1].classList.add("active");
+            setTimeout(showSlides, 5000); // Change d'image toutes les 5 secondes
+        }
+
+        // Initialiser le slideshow
+        showSlides();
+    </script>
+</body>
+</html>
